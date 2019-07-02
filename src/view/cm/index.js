@@ -27,7 +27,7 @@ export default class Home extends Component {
           </Switch>
         </Content>
         <Footer>
-          <NavLink to='/'><div><span>电影</span><i className="iconfont icondianying1"></i></div></NavLink>
+          <NavLink to='/movie'><div><span>电影</span><i className="iconfont icondianying1"></i></div></NavLink>
           <NavLink to='/cinema'><div><span>影院</span><i className="iconfont iconyingyuana"></i></div></NavLink>
           <NavLink to='/login'><div><span>我的</span><i className="iconfont iconwode"></i></div></NavLink>
         </Footer>
