@@ -4,8 +4,6 @@ import App from './App'
 import { Provider } from 'react-redux';
 import store from './store/index'
 import './style/base.less'
-
-
 ReactDOM.render(
   <Provider store={store}>
     <App />
@@ -13,3 +11,4 @@ ReactDOM.render(
   ,
   document.getElementById('root')
 )
+

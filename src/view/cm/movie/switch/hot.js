@@ -53,31 +53,24 @@ class Hot extends Component {
         }
       </Hotout>
     )
-
   }
-  onScroll() {
-    // let scrollHeight = this.refs.mycontent1.scrollHeight;
-    // let scrollTop = this.refs.mycontent1.scrollTop;
-    // let clentHeight = this.refs.mycontent1.clientHeight;
-    let scrollHeight = document.getElementsByClassName('items')[0].scrollHeight;
-    let scrollTop = document.getElementsByClassName('items')[0].scrollTop;
-    let clentHeight = document.getElementsByClassName('items')[0].clientHeight;
+  onScroll = () => {
+    let scrollHeight = document.getElementsByClassName('sc-bZQynM')[0].scrollHeight;
+    let scrollTop = document.getElementsByClassName('sc-bZQynM')[0].scrollTop;
+    let clentHeight = document.getElementsByClassName('sc-bZQynM')[0].clientHeight;
     if (scrollHeight - scrollTop - clentHeight < 50) {
       this.props.getHotList()
     }
+    // console.log(scrollHeight, scrollTop, clentHeight)
   }
   componentDidMount() {
-
     this.props.getHotList()
-    // window.addEventListener('scroll', this.onScroll,true)
-
-
+    window.addEventListener('scroll', this.onScroll, true)
   }
   componentDidUpdate() {
+    // this.onScroll()
     console.log(this.props.movieList)
     // window.addEventListener('scroll', this.onScroll,true)
-
-
   }
 }
 const mapStateToProps = (state, props) => {

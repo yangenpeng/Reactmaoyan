@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+  var arr=[1,1,1,2,2,3,3,5,9]
+  var obj={}
+  for(let i=0;i<arr.length;i++){
+   obj[arr[i]]=0;
+  }
+for(var key in obj){
+  for(let k=0;k<arr.length;k++){
+    if(key==arr[k]){
+      obj[key]+=1;
+    }
+  }
+}
+  console.log(obj)
+</script>
+</html>

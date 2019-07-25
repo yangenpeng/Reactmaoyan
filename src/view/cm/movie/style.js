@@ -73,6 +73,9 @@ export const Section = styled.section`
     font-size:30px;
       color:#ef4339;
     }
+    a{
+      text-decoration:none;
+    }
 }
 .switch-hot{
   .active{

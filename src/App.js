@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import Loadable from 'react-loadable';
+import Ctiy from './view/city';
 
 const Home = Loadable({
   loader: () => import('./view/cm/index'),
@@ -9,6 +10,14 @@ const Home = Loadable({
 const Login = Loadable({
   loader: () => import('./view/login/index'),
   loading: () => <div>玩命加载中</div>
+})
+const Search = Loadable({
+  loader: () => import('./view/search/index'),
+  loading: () => <div>玩命加载中</div>
+})
+const City = Loadable({
+  loader: () => import('./view/city/index'),
+  loading: () => <div>wangmjiaz</div>
 })
 export default class App extends Component {
   constructor(props) {
@@ -26,6 +35,8 @@ export default class App extends Component {
       <Router>
         <Switch>
           <Route path="/login" component={Login} />
+          <Route path="/search" component={Search} />
+          <Route path='/city' component={City} />
           <Route path="/" component={Home} />
         </Switch>
       </Router>

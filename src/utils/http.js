@@ -3,7 +3,7 @@ const http = axios.create();
 http.interceptors.response.use(response => {
 
   let res = response.data;
-  console.log(res)
+  // console.log(res)
   return res
 })
 export default http;
